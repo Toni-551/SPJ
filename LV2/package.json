@@ -1,0 +1,10 @@
+{
+    "type": "module",
+    "dependencies": {
+        "fs": "^0.0.1-security",
+        "mosca": "^2.8.3",
+        "mqtt": "^4.3.7",
+        "require": "^2.4.20",
+        "requirejs": "^2.3.6"
+    }
+}

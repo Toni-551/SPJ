@@ -29,7 +29,15 @@ Printer.prototype.printaj = function (n){
         console.log("Nema boje");
         return 0;
     }else{
-        this.nivo_tonera-=n*0.1;
+        if(this.dvostranoIspisivanje){
+            if(n%2==0){
+                this.nivo_tonera-=(n/2)*0.2;
+            }else{
+                this.nivo_tonera-=Math.floor(n/2)*0.2-0.1;
+            }
+        }else{
+            this.nivo_tonera-=n*0.1;
+        }
         this.ukupanBrojStranica+=n;
         return n;
     }
