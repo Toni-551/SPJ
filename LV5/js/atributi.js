@@ -1,10 +1,22 @@
 
-function download(data, fileName, contentType) {
-    var a = document.createElement("a");
-    var file = new Blob([data], {type: contentType});
-    a.href = URL.createObjectURL(file);
-    a.download = fileName;
-    a.click();
+function Write(jsonData) {
+    $.ajax({
+        url: "Write.php",
+        type: 'post',
+        dataType: 'text',
+        data:{
+            'json':jsonData
+        },
+        async: false,
+        success: function(oData)
+        {
+
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+           // alert(xhr.status);
+            alert(thrownError);
+          }
+    });
 }
 
 $('#slct').change(function(){
@@ -15,12 +27,8 @@ $('#btn').click(function(){
          type:$('#inpt').attr("type"),
          input:$('#inpt').val()
     }
-    $.getJSON('atributi.json', function(jd){
-        console.log(jd);
-    });
-
     var jsonData = JSON.stringify(jObject);
 
-    download(jsonData, 'atributi.json', 'text/json');
-    console.log(jsonData);
+    Write(jsonData);
+    console.log(typeof jsonData);
 });
