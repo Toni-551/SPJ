@@ -15,7 +15,7 @@ function Artikli(){
     return lista;
 }
 function Choice(prop){
-    return prop.kolicina=="0"? <td><button onClick={()=>PosaljiUpit(prop.kolicina)}>Posalji Upit</button></td>:<td><button onClick={()=>DodajUKosaru(prop.kolicina)}>Dodaj u kosaricu</button></td>;
+    return prop.kolicina=="0"? <td><button className="btn btn-primary" onClick={()=>PosaljiUpit(prop.kolicina)}>Posalji Upit</button></td>:<td><button className="btn btn-primary" onClick={()=>DodajUKosaru(prop.kolicina)}>Dodaj u kosaricu</button></td>;
 }
 
 function DodajUKosaru(kol){
