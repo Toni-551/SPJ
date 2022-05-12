@@ -1,0 +1,42 @@
+[
+{
+    "Id":"01",
+    "Naziv":"Samsung Galaxy A52s",
+    "Proizvodac":"Samsung ",
+    "Model":"Galaxy A52s",
+    "Cijena":2799.00,
+   "Kolicina":0
+},
+{
+    "Id":"02",
+    "Naziv":"PlayStation VR Starter Pack + VR Worlds VCH Mk5",
+    "Proizvodac":"Sony",
+    "Model":"Mk5",
+    "Cijena":2299.00,
+   "Kolicina":1
+},
+{
+    "Id":"03",
+    "Naziv":"Procesor Intel Celeron G5905",
+    "Proizvodac":"Intel",
+    "Model":"Celeron G5905",
+    "Cijena":312.01,
+   "Kolicina":2
+},
+{
+    "Id":"04",
+    "Naziv":"Procesor AMD Athlon 300GE",
+    "Proizvodac":"AMD",
+    "Model":"Athlon 300GE",
+    "Cijena":570.89,
+   "Kolicina":4
+},
+{
+    "Id":"05",
+    "Naziv":"Procesor INTEL Core i9-10850K ",
+    "Proizvodac":"INTEL",
+    "Model":"Core i9-10850K",
+    "Cijena":3513.29,
+   "Kolicina":1
+}
+]
