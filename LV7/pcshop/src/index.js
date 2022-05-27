@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Dodaj from "./routes/dodaj";
+import Uredi from "./routes/Uredi";
 import Ucitaj from "./routes/Ucitaj";
 import * as ReactDOMClient from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -18,6 +19,7 @@ root.render(
         <Route path="/" element={<App />}>
           <Route path="dodaj" element={<Dodaj />} />
           <Route path="" element={<Ucitaj />} />
+          <Route path="Edit/:EditID" element={<Uredi />} />
         </Route>
       </Routes>
   </BrowserRouter>
