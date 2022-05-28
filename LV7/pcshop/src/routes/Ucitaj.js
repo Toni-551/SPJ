@@ -28,7 +28,18 @@ function Ucitaj(props) {
     }
     //return the item which contains the user input
     else {
-        return el.Naziv.toLowerCase().includes(props.input)
+      console.log(props.select);
+      switch(props.select){
+        case "naziv":{
+          return el.Naziv.toLowerCase().includes(props.input);
+        }case "proizvodac":{
+          return el.Proizvodac.toLowerCase().includes(props.input);
+        }case "model":{
+          return el.Modelo.toLowerCase().includes(props.input);
+        }default:{
+          return el.Naziv.toLowerCase().includes(props.input);
+        }
+      }
     }
     });
 
@@ -59,15 +70,23 @@ function Ucitaj(props) {
 
 function Table(){
   const [input, setInput] = useState("");
+  const [selected, setselected] = useState("");
   return(
     <div className='container'>
       <label>Unesite naiv aritkla:
         <input
         type="text"
+        className="ml-2 mr-2"
         value={input}
         onChange={(e) => setInput(e.target.value.toLowerCase())}
         />
       </label>
+      <label>Traži prema:</label>
+      <select onChange={(e) => setselected(e.target.value.toLowerCase())}>
+        <option value="naziv">Naziv</option>
+        <option value="proizvodac">Proizvodac</option>
+        <option value="model">Model</option>
+      </select>
       <table className='table table-striped'>
         <thead>
           <tr>
@@ -82,7 +101,7 @@ function Table(){
           </tr>
         </thead>
         <tbody>
-        <Ucitaj  input={input}/>
+        <Ucitaj  input={input} select={selected}/>
         </tbody>
       </table>
       </div>
